@@ -41,6 +41,9 @@ Devise.setup do |config|
 
   # Setup a pepper to generate the encrypted password.
   config.pepper = Rails.configuration.secret_token
+  
+  # Added to make newer version of devise happy.
+  config.secret_key = '03fc8fd29c0dfb1b6ff4e4cdb1cd330709f0664da04717cd7e2bbe6f4de3de75dd0e43e3a589725480f4f1d3ab26b2dcdfe14114012a3d1b880f4a8a6ba69f4e'
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
