@@ -1,8 +1,10 @@
 module Spree
   class User < ActiveRecord::Base
     include Core::UserBanners
+    
+    # Removed :token_authenticatable from the list of passed into devise below. Adam
 
-    devise :database_authenticatable, :token_authenticatable, :registerable, :recoverable,
+    devise :database_authenticatable, :registerable, :recoverable,
            :rememberable, :trackable, :validatable, :encryptable, :encryptor => 'authlogic_sha512'
 
     has_many :orders
